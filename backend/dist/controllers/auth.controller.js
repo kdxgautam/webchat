@@ -31,7 +31,6 @@ const signup = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         // HASH PASSWORD HERE
         const salt = yield bcryptjs_1.default.genSalt(10);
         const hashedPassword = yield bcryptjs_1.default.hash(password, salt);
-        // https://avatar-placeholder.iran.liara.run/
         const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;
         const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
         const newUser = new user_model_1.default({
